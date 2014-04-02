@@ -1,0 +1,229 @@
+* {
+	font-family: Cordia New, Calibri Light, Helvetica;
+}
+
+span.eglMblCheckbox input.mblCheckBox{
+	margin-top: .2em; vertical-align: middle; -webkit-transform : none; display: inline-block;
+	transform : none;
+}
+
+.mblHeading{
+	overflow-x: visible !important;
+	overflow-y: visible !important;
+}
+
+/* 
+	enhance dojox/mobile/TabBar to support automatically
+	increase to multiple rows
+*/
+.mblTabBar {
+	height: auto !important;
+}
+
+*{
+-webkit-tap-highlight-color: rgba(0,0,0,0); 
+}
+
+.eglMblCheckbox{
+	cursor:pointer;
+}
+
+input.mblCheckBox {
+	vertical-align:middle;
+}
+
+
+/*---- IOS7 look */
+
+/* --- heading --- */
+.mblHeading{
+	background-image: none;
+	background-color: #D7D7D7;
+	color: #1F1F24; 
+	font-weight: 100;
+	font-size: 34px;
+}
+
+.dj_gecko .mblHeading { /*firefox specific*/
+	background-image: none;
+}
+
+/* -- background -- */
+
+.mblBackground{
+	background-color: #F7F7F7;
+}
+
+
+/* -- tabbar --- */
+.mblTabBarSegmentedControl, .mblTabBarStandardTab {
+	background-image: none;
+	background-color: #D7D7D7;
+
+	
+}	
+
+.mblTabBarSegmentedControl .mblTabBarButton {
+	box-shadow: none;
+}
+
+.mblTabBar{
+	border-bottom: 1px solid;
+	border-top: 1px solid ;
+	text-shadow: none;
+}
+ 
+.mblTabBarSegmentedControl .mblTabBarButton, .mblTabBarStandardTab .mblTabBarButton {
+	background-image: none;
+	border-color: #007AFF;
+	color: #007AFF;
+	font-size: 20px;
+	font-weight: normal;
+	background-color: transparent;
+}
+
+.mblTabBarSegmentedControl .mblTabBarButtonSelected, .mblTabBarStandardTab .mblTabBarButtonSelected{
+	color: white;
+	background-color: #007AFF;
+}
+
+/* ---- menu --- */
+
+.mblRoundRectList{
+	background: white; /*linear-gradient(#F7F7F7, #D7D7D7) repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+	border-radius: 0px;
+	margin: 0 0 0;
+}
+
+.dj_gecko  .mblRoundRectList{
+	background: white; /*linear-gradient(#F7F7F7, #D7D7D7) repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+	border-radius: 0px;
+	margin: 0 0 0;
+}
+
+.mblRoundRectCategory{
+	color: #8E8E93;
+	text-shadow: none;
+	margin: 18px 0 0 9px;
+}
+
+.mblListItem{
+	color: #1F1F21;
+	font-weight: normal;
+	border-bottom: 0px;
+	font-size:20px;
+}
+
+
+/* -- slider ---*/
+
+.mblSliderProgressBar {
+	background: #007AFF;
+}
+
+.mblSliderH {
+    height: 2px;
+}
+
+.mblSlider {
+	background: white;
+}
+
+
+.dj_gecko .mblSlider {
+	background: white;
+}
+
+.mblSliderHandle {
+	background:	white;
+	border-color:#8E8E93;
+	width:	25px;
+	height:	25px;
+	border-radius: 20px;
+	margin: -15px 0 0 -15px	
+}
+
+.dj_gecko .mblSliderHandle{
+	background:	white;
+	border-color:#8E8E93;
+	width:	25px;
+	height:	25px;
+	border-radius: 20px;
+	margin: -15px 0 0 -15px	
+}
+
+
+/* --- switch --- */
+
+.mblSwitchBgLeft {
+    background: #4cd964;
+    background-image:	none;
+    border-color:#F7F7F7;
+}    
+
+.mblSwDefaultShape .mblSwitchBgLeft {
+	background-image:	none;
+	background: #4cd964;
+	border-color:#F7F7F7;
+}
+
+.dj_gecko .mblSwDefaultShape .mblSwitchBgLeft {
+	background-image:	none;
+	background: #4cd964;
+	border-color:#F7F7F7;
+}
+
+.mblSwitchBgRight {
+    background: white;
+    background-image:	none;
+    border-color:#8E8E93;
+}    
+
+.mblSwDefaultShape .mblSwitchBgRight {
+	background-image:	none;
+	background: white;
+	border-color:#8E8E93;
+}
+
+.dj_gecko .mblSwDefaultShape .mblSwitchBgRight {
+	background-image:	none;
+	background: white;
+	border-color: #8E8E93;
+}
+
+.mblSwitchKnob {
+	background: white;
+	border-color: #8E8E93;
+}
+
+.dj_gecko .mblSwitch .mblSwitchKnob {
+	background: white;
+	border-color: #8E8E93;
+}
+
+.mblSwitch .mblSwitchKnob {
+	background: white;
+	border-color: #8E8E93;
+}
+
+
+
+/* --- button --- */
+
+.mblButton {
+    background: transparent;
+    border-color: #007AFF;
+    border-width: 2px;
+    background-image: none;
+    font-family: Cordia New, Calibri Light;
+    font-size: 18px;
+    
+}
+
+.dj_gecko .mblButton {
+    background: transparent;
+    border-color: #007AFF;
+    border-width: 2px;
+	background-image:	none;
+	font-family: Cordia New;
+}

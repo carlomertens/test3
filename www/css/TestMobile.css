@@ -1,0 +1,34 @@
+@media only screen and (min-width: 900px) and (orientation:landscape)
+{
+	.view1Div{
+	position: absolute;
+	top:20;
+	left:0;
+	width: 250px;
+	}
+	
+	.view2Div{
+	position: absolute;
+	top:20;
+	left:260px;
+	width: 730px;
+	}
+}
+
+@media only screen and (max-width: 800px) and (orientation:portrait)
+{
+	.view1Div{
+	position: relative;
+	top:20;
+
+	}
+	
+	.view2Div{
+	position: relative;
+	top:20;
+
+	}
+}
+
+
+
