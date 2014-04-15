@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><servicemappings>
-  <servicemapping classname="eu.imtech.testrest.ws.services.TestService">
-    <uri httpmethod="POST" in-encoding="JSON" out-encoding="JSON">/TestService</uri>
-  </servicemapping>
-  <contextroot>/eu.imtech.testrest.ws/restservices</contextroot>
-</servicemappings>

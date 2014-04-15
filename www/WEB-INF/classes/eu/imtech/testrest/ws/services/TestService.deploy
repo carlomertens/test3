@@ -1,5 +1,0 @@
-<deploy package="eu.imtech.testrest.ws.services" partName="TestService" partType="Service" version="2">
-	<buildDescriptors>
-		<buildDescriptor name="eu_imtech_testrest_wsWebBuildOptions" fileName="\eu.imtech.testrest.ws\EGLSource\eu_imtech_testrest_ws.eglbld" egldd="" genProject="eu.imtech.testrest.ws"/>
-	</buildDescriptors>
-</deploy>
