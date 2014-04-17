@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><java-wsdl-mapping version="1.1" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://www.ibm.com/webservices/xsd/j2ee_jaxrpc_mapping_1_1.xsd">
+    <package-mapping>
+        <package-type>ws.eu.imtech.testrest.ws.services</package-type>
+        <namespaceURI>http://services.ws.testrest.imtech.eu</namespaceURI>
+    </package-mapping>
+    <java-xml-type-mapping>
+        <java-type>java.util.Calendar</java-type>
+        <root-type-qname xmlns:rtq="http://www.w3.org/2001/XMLSchema">rtq:date</root-type-qname>
+        <qname-scope>simpleType</qname-scope>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>java.util.Calendar</java-type>
+        <root-type-qname xmlns:rtq="http://www.w3.org/2001/XMLSchema">rtq:time</root-type-qname>
+        <qname-scope>simpleType</qname-scope>
+    </java-xml-type-mapping>
+    <service-interface-mapping>
+        <service-interface>ws.eu.imtech.testrest.ws.services.SoapServiceService</service-interface>
+        <wsdl-service-name xmlns:sim="http://services.ws.testrest.imtech.eu">sim:SoapServiceService</wsdl-service-name>
+        <port-mapping>
+            <port-name>SoapService</port-name>
+            <java-port-name>SoapService</java-port-name>
+        </port-mapping>
+    </service-interface-mapping>
+    <service-endpoint-interface-mapping>
+        <service-endpoint-interface>ws.eu.imtech.testrest.ws.services.SoapService</service-endpoint-interface>
+        <wsdl-port-type xmlns:seimwpt="http://services.ws.testrest.imtech.eu">seimwpt:SoapService</wsdl-port-type>
+        <wsdl-binding xmlns:seimwb="http://services.ws.testrest.imtech.eu">seimwb:SoapServiceBinding</wsdl-binding>
+        <service-endpoint-method-mapping>
+            <java-method-name>getCurrentDate</java-method-name>
+            <wsdl-operation>getCurrentDate</wsdl-operation>
+            <wrapped-element/>
+            <method-param-parts-mapping>
+                <param-position>0</param-position>
+                <param-type>java.util.Calendar</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://services.ws.testrest.imtech.eu">mppm:getCurrentDateResponse</wsdl-message>
+                    <wsdl-message-part-name>currentDate</wsdl-message-part-name>
+                    <parameter-mode>OUT</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>1</param-position>
+                <param-type>java.util.Calendar</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://services.ws.testrest.imtech.eu">mppm:getCurrentDateResponse</wsdl-message>
+                    <wsdl-message-part-name>currentTime</wsdl-message-part-name>
+                    <parameter-mode>OUT</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <wsdl-return-value-mapping>
+                <method-return-value>void</method-return-value>
+                <wsdl-message xmlns:wrvm="http://services.ws.testrest.imtech.eu">wrvm:getCurrentDateResponse</wsdl-message>
+            </wsdl-return-value-mapping>
+        </service-endpoint-method-mapping>
+    </service-endpoint-interface-mapping>
+</java-wsdl-mapping>

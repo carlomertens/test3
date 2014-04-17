@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://services.ws.testrest.imtech.eu" xmlns:tns="http://services.ws.testrest.imtech.eu" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <schema targetNamespace="http://services.ws.testrest.imtech.eu" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.ws.testrest.imtech.eu" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <element name="getCurrentDate">
+        <complexType>
+          <sequence>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="getCurrentDateResponse">
+        <complexType>
+          <sequence>
+          <element maxOccurs="1" name="currentDate" nillable="false" type="xsd:date"/>
+          <element maxOccurs="1" name="currentTime" nillable="false" type="xsd:time"/>
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="getCurrentDateResponse">
+    <wsdl:part element="tns:getCurrentDateResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCurrentDateRequest">
+    <wsdl:part element="tns:getCurrentDate" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="SoapService">
+    <wsdl:operation name="getCurrentDate">
+<wsdl:documentation>EGL_PARAMETER_ORDER currentDate currentTime </wsdl:documentation>
+      <wsdl:input message="tns:getCurrentDateRequest" name="getCurrentDateRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getCurrentDateResponse" name="getCurrentDateResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SoapServiceBinding" type="tns:SoapService">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getCurrentDate">
+      <wsdlsoap:operation soapAction="getCurrentDate"/>
+      <wsdl:input name="getCurrentDateRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCurrentDateResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SoapServiceService">
+    <wsdl:port binding="tns:SoapServiceBinding" name="SoapService">
+      <wsdlsoap:address location="http://eniac02.eniac.nl:10137/eu.imtech.testrest.ws/services/SoapService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

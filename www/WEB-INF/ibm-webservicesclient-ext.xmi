@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.etools.webservice.wscext:WsClientExtension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.etools.webservice.wscext="http://www.ibm.com/websphere/appserver/schemas/5.0.2/wscext.xmi" xmi:id="WsClientExtension_1397723629237">
+  <serviceRefs xmi:id="ServiceRef_1397723632108" serviceRefLink="service/SoapServiceService">
+    <portQnameBindings xmi:id="PortQnameBinding_1397723632108" portQnameLocalNameLink="SoapService"/>
+  </serviceRefs>
+</com.ibm.etools.webservice.wscext:WsClientExtension>
