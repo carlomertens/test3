@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-<!-- Generated at Tue Apr 15 10:42:17 CEST 2014 by EGL 1.0.1.v20131117_0007 -->
+<!-- Generated at Thu Apr 17 10:33:48 CEST 2014 by EGL 1.0.1.v20131117_0007 -->
 <title>Index</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <script type="text/javascript">
@@ -11751,30 +11751,6 @@ _53.set(_52,"tabindex",0);
 <!-- End of included file: dojo/mobile/widgets/DojoMobileBase.html -->
 
 <script>
-// Included file: dojo/mobile/widgets/DojoMobileButton.js
-egl.defineWidget("dojo.mobile.widgets","DojoMobileButton","dojo.mobile.widgets","DojoMobileBase","button",{"eglBaseClass":"eglMblBtn","standardEvents":["click","mousedown","mouseup","mouseover","mousemove","mouseout","change"],"constructor":function(){
-var _1=this;
-require(["dojox/mobile/Button"],function(){
-_1._safeRender();
-});
-},"createDojoWidget":function(_2,_3){
-var _4=this;
-_2.innerHTML=_4.text||"";
-_4.domNode=_2;
-_4.dojoWidget=new dojox.mobile.Button(_3,_2);
-this.dojoWidget.domNode.innerHTML=this.text||"";
-_4.synchronor.trigger(_4,"SYN_READY");
-_4.dojoWidget.startup();
-},"setText":function(_5){
-this.text=_5;
-if(this.domNode){
-this.domNode.innerHTML=this.text;
-}
-}});
-
-// End of included file: dojo/mobile/widgets/DojoMobileButton.js
-</script>
-<script>
 // Included file: dojo/mobile/widgets/DojoMobileTextArea.js
 egl.defineWidget("dojo.mobile.widgets","DojoMobileTextArea","dojo.mobile.widgets","DojoMobileBase","textarea",{"standardEvents":["click","focus","blur","keydown","keypress","keyup","mousedown","mouseup","mouseover","mousemove","mouseout","change"],"eglBaseClass":"eglMblTextArea","constructor":function(){
 var _1=this;
@@ -11864,6 +11840,30 @@ return this.placeHolder;
 // End of included file: dojo/mobile/widgets/DojoMobileTextArea.js
 </script>
 <script>
+// Included file: dojo/mobile/widgets/DojoMobileButton.js
+egl.defineWidget("dojo.mobile.widgets","DojoMobileButton","dojo.mobile.widgets","DojoMobileBase","button",{"eglBaseClass":"eglMblBtn","standardEvents":["click","mousedown","mouseup","mouseover","mousemove","mouseout","change"],"constructor":function(){
+var _1=this;
+require(["dojox/mobile/Button"],function(){
+_1._safeRender();
+});
+},"createDojoWidget":function(_2,_3){
+var _4=this;
+_2.innerHTML=_4.text||"";
+_4.domNode=_2;
+_4.dojoWidget=new dojox.mobile.Button(_3,_2);
+this.dojoWidget.domNode.innerHTML=this.text||"";
+_4.synchronor.trigger(_4,"SYN_READY");
+_4.dojoWidget.startup();
+},"setText":function(_5){
+this.text=_5;
+if(this.domNode){
+this.domNode.innerHTML=this.text;
+}
+}});
+
+// End of included file: dojo/mobile/widgets/DojoMobileButton.js
+</script>
+<script>
 // Included file: com/ibm/egl/rui/widgets/UtilLibNative.js
 egl.defineClass("com.ibm.egl.rui.widgets","UtilLibNative",{"getWidgetVariableName":function(_1){
 if(_1!=null&&_1.eze$$variableName!=undefined){
@@ -11913,6 +11913,167 @@ return "[GridLayoutLib]";
 }});
 
 // End of included file: com/ibm/egl/rui/widgets/GridLayoutLib.js
+</script>
+<script>
+// Included file: com/ibm/egl/rui/widgets/GridLayoutData.js
+egl.defineClass("com.ibm.egl.rui.widgets","GridLayoutData","egl.jsrt","Record",{"eze$$fileName":"/com.ibm.egl.rui_4.2.2/EGLSource/com/ibm/egl/rui/widgets/GridLayout.egl","constructor":function(){
+this.eze$$XMLRootElementName="GridLayoutData";
+this.eze$$setInitial();
+},"eze$$setEmpty":function(){
+this.row=0;
+this.column=0;
+this.horizontalSpan=0;
+this.verticalSpan=0;
+this.cellPadding=0;
+this.widthHint="";
+this.heightHint="";
+this.horizontalAlignment=0;
+this.verticalAlignment=0;
+},"eze$$setInitial":function(){
+this.eze$$setEmpty();
+if(egl.com.ibm.egl.rui.widgets.GridLayoutLib["$inst"]===undefined){
+new egl.com.ibm.egl.rui.widgets.GridLayoutLib();
+}
+this.horizontalSpan=1;
+this.verticalSpan=1;
+this.verticalAlignment=4;
+},"eze$$clone":function(){
+var _1=this;
+var _2=new egl.com.ibm.egl.rui.widgets.GridLayoutData();
+_2.eze$$isNull=this.eze$$isNull;
+_2.eze$$isNullable=this.eze$$isNullable;
+_2.eze$$assign(_1);
+return _2;
+},"eze$$assign":function(_3){
+if(!this.eze$$isNullable&&_3.eze$$isNull){
+this.eze$$setEmpty();
+}else{
+if(this.eze$$isNullable){
+this.eze$$isNull=_3.eze$$isNull;
+}
+this.row=_3.row;
+this.column=_3.column;
+this.horizontalSpan=_3.horizontalSpan;
+this.verticalSpan=_3.verticalSpan;
+this.cellPadding=_3.cellPadding;
+this.widthHint=_3.widthHint;
+this.heightHint=_3.heightHint;
+this.horizontalAlignment=_3.horizontalAlignment;
+this.verticalAlignment=_3.verticalAlignment;
+}
+},"eze$$getFieldSignatures":function(){
+return [{name:"row",value:this.row,type:"I;"},{name:"column",value:this.column,type:"I;"},{name:"horizontalSpan",value:this.horizontalSpan,type:"I;"},{name:"verticalSpan",value:this.verticalSpan,type:"I;"},{name:"cellPadding",value:this.cellPadding,type:"I;"},{name:"widthHint",value:this.widthHint,type:"S;"},{name:"heightHint",value:this.heightHint,type:"S;"},{name:"horizontalAlignment",value:this.horizontalAlignment,type:"I;"},{name:"verticalAlignment",value:this.verticalAlignment,type:"I;"}];
+},"eze$$getFORMDataNames":function(){
+return [["row","row"],["column","column"],["horizontalSpan","horizontalSpan"],["verticalSpan","verticalSpan"],["cellPadding","cellPadding"],["widthHint","widthHint"],["heightHint","heightHint"],["horizontalAlignment","horizontalAlignment"],["verticalAlignment","verticalAlignment"]];
+},"eze$$getJSONNames":function(){
+return [["row","row"],["column","column"],["horizontalSpan","horizontalSpan"],["verticalSpan","verticalSpan"],["cellPadding","cellPadding"],["widthHint","widthHint"],["heightHint","heightHint"],["horizontalAlignment","horizontalAlignment"],["verticalAlignment","verticalAlignment"]];
+},"eze$$fromJson":function(_4,_5){
+if(_4==null){
+return;
+}
+this.eze$$setInitial();
+this.setNull(false);
+if(_5){
+var _6=[];
+for(f in _4){
+if(typeof (_4[f])=="string"){
+_4[f]=_4[f].replace(/&quot;/g,"\"");
+}
+_6.push(_4[f]);
+}
+this.row=egl.convertFloatToInt(_6[0]);
+this.column=egl.convertFloatToInt(_6[1]);
+this.horizontalSpan=egl.convertFloatToInt(_6[2]);
+this.verticalSpan=egl.convertFloatToInt(_6[3]);
+this.cellPadding=egl.convertFloatToInt(_6[4]);
+this.widthHint=_6[5];
+this.heightHint=_6[6];
+this.horizontalAlignment=egl.convertFloatToInt(_6[7]);
+this.verticalAlignment=egl.convertFloatToInt(_6[8]);
+}else{
+egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_4["row"],"this.row",false);
+this.row=egl.convertFloatToInt(_4["row"]);
+egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_4["column"],"this.column",false);
+this.column=egl.convertFloatToInt(_4["column"]);
+egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_4["horizontalSpan"],"this.horizontalSpan",false);
+this.horizontalSpan=egl.convertFloatToInt(_4["horizontalSpan"]);
+egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_4["verticalSpan"],"this.verticalSpan",false);
+this.verticalSpan=egl.convertFloatToInt(_4["verticalSpan"]);
+egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_4["cellPadding"],"this.cellPadding",false);
+this.cellPadding=egl.convertFloatToInt(_4["cellPadding"]);
+egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_4["widthHint"],"this.widthHint",false);
+this.widthHint=_4["widthHint"];
+egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_4["heightHint"],"this.heightHint",false);
+this.heightHint=_4["heightHint"];
+egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_4["horizontalAlignment"],"this.horizontalAlignment",false);
+this.horizontalAlignment=egl.convertFloatToInt(_4["horizontalAlignment"]);
+egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_4["verticalAlignment"],"this.verticalAlignment",false);
+this.verticalAlignment=egl.convertFloatToInt(_4["verticalAlignment"]);
+}
+},"eze$$fromXML":function(_7,_8){
+var _9,_a,_b;
+this.eze$$setInitial();
+if(_8==null){
+_8=this.eze$$XMLRootElementName;
+}
+_b=egl.egl.core.$XMLLib.setSimpleElementField(_7,"row");
+if(_b){
+this.row=egl.convertStringToInt(_b);
+}
+_b=egl.egl.core.$XMLLib.setSimpleElementField(_7,"column");
+if(_b){
+this.column=egl.convertStringToInt(_b);
+}
+_b=egl.egl.core.$XMLLib.setSimpleElementField(_7,"horizontalSpan");
+if(_b){
+this.horizontalSpan=egl.convertStringToInt(_b);
+}
+_b=egl.egl.core.$XMLLib.setSimpleElementField(_7,"verticalSpan");
+if(_b){
+this.verticalSpan=egl.convertStringToInt(_b);
+}
+_b=egl.egl.core.$XMLLib.setSimpleElementField(_7,"cellPadding");
+if(_b){
+this.cellPadding=egl.convertStringToInt(_b);
+}
+_b=egl.egl.core.$XMLLib.setSimpleElementField(_7,"widthHint");
+if(_b){
+this.widthHint=_b;
+}
+_b=egl.egl.core.$XMLLib.setSimpleElementField(_7,"heightHint");
+if(_b){
+this.heightHint=_b;
+}
+_b=egl.egl.core.$XMLLib.setSimpleElementField(_7,"horizontalAlignment");
+if(_b){
+this.horizontalAlignment=egl.convertStringToInt(_b);
+}
+_b=egl.egl.core.$XMLLib.setSimpleElementField(_7,"verticalAlignment");
+if(_b){
+this.verticalAlignment=egl.convertStringToInt(_b);
+}
+},"eze$$toXML":function(_c,_d){
+var _e;
+if(_d==null){
+_e="";
+_d=_e+this.eze$$XMLRootElementName;
+}
+var s=["<"+_d];
+s.push(">");
+s.push(egl.egl.core.$XMLLib.writeElement(this.row,"row"));
+s.push(egl.egl.core.$XMLLib.writeElement(this.column,"column"));
+s.push(egl.egl.core.$XMLLib.writeElement(this.horizontalSpan,"horizontalSpan"));
+s.push(egl.egl.core.$XMLLib.writeElement(this.verticalSpan,"verticalSpan"));
+s.push(egl.egl.core.$XMLLib.writeElement(this.cellPadding,"cellPadding"));
+s.push(egl.egl.core.$XMLLib.writeElement(this.widthHint,"widthHint"));
+s.push(egl.egl.core.$XMLLib.writeElement(this.heightHint,"heightHint"));
+s.push(egl.egl.core.$XMLLib.writeElement(this.horizontalAlignment,"horizontalAlignment"));
+s.push(egl.egl.core.$XMLLib.writeElement(this.verticalAlignment,"verticalAlignment"));
+s.push("</"+_d+">");
+return s.join("");
+}});
+
+// End of included file: com/ibm/egl/rui/widgets/GridLayoutData.js
 </script>
 <script>
 // Included file: com/ibm/egl/rui/widgets/BoxLib.js
@@ -12116,167 +12277,6 @@ return "[Box]";
 }});
 
 // End of included file: com/ibm/egl/rui/widgets/Box.js
-</script>
-<script>
-// Included file: com/ibm/egl/rui/widgets/GridLayoutData.js
-egl.defineClass("com.ibm.egl.rui.widgets","GridLayoutData","egl.jsrt","Record",{"eze$$fileName":"/com.ibm.egl.rui_4.2.2/EGLSource/com/ibm/egl/rui/widgets/GridLayout.egl","constructor":function(){
-this.eze$$XMLRootElementName="GridLayoutData";
-this.eze$$setInitial();
-},"eze$$setEmpty":function(){
-this.row=0;
-this.column=0;
-this.horizontalSpan=0;
-this.verticalSpan=0;
-this.cellPadding=0;
-this.widthHint="";
-this.heightHint="";
-this.horizontalAlignment=0;
-this.verticalAlignment=0;
-},"eze$$setInitial":function(){
-this.eze$$setEmpty();
-if(egl.com.ibm.egl.rui.widgets.GridLayoutLib["$inst"]===undefined){
-new egl.com.ibm.egl.rui.widgets.GridLayoutLib();
-}
-this.horizontalSpan=1;
-this.verticalSpan=1;
-this.verticalAlignment=4;
-},"eze$$clone":function(){
-var _1=this;
-var _2=new egl.com.ibm.egl.rui.widgets.GridLayoutData();
-_2.eze$$isNull=this.eze$$isNull;
-_2.eze$$isNullable=this.eze$$isNullable;
-_2.eze$$assign(_1);
-return _2;
-},"eze$$assign":function(_3){
-if(!this.eze$$isNullable&&_3.eze$$isNull){
-this.eze$$setEmpty();
-}else{
-if(this.eze$$isNullable){
-this.eze$$isNull=_3.eze$$isNull;
-}
-this.row=_3.row;
-this.column=_3.column;
-this.horizontalSpan=_3.horizontalSpan;
-this.verticalSpan=_3.verticalSpan;
-this.cellPadding=_3.cellPadding;
-this.widthHint=_3.widthHint;
-this.heightHint=_3.heightHint;
-this.horizontalAlignment=_3.horizontalAlignment;
-this.verticalAlignment=_3.verticalAlignment;
-}
-},"eze$$getFieldSignatures":function(){
-return [{name:"row",value:this.row,type:"I;"},{name:"column",value:this.column,type:"I;"},{name:"horizontalSpan",value:this.horizontalSpan,type:"I;"},{name:"verticalSpan",value:this.verticalSpan,type:"I;"},{name:"cellPadding",value:this.cellPadding,type:"I;"},{name:"widthHint",value:this.widthHint,type:"S;"},{name:"heightHint",value:this.heightHint,type:"S;"},{name:"horizontalAlignment",value:this.horizontalAlignment,type:"I;"},{name:"verticalAlignment",value:this.verticalAlignment,type:"I;"}];
-},"eze$$getFORMDataNames":function(){
-return [["row","row"],["column","column"],["horizontalSpan","horizontalSpan"],["verticalSpan","verticalSpan"],["cellPadding","cellPadding"],["widthHint","widthHint"],["heightHint","heightHint"],["horizontalAlignment","horizontalAlignment"],["verticalAlignment","verticalAlignment"]];
-},"eze$$getJSONNames":function(){
-return [["row","row"],["column","column"],["horizontalSpan","horizontalSpan"],["verticalSpan","verticalSpan"],["cellPadding","cellPadding"],["widthHint","widthHint"],["heightHint","heightHint"],["horizontalAlignment","horizontalAlignment"],["verticalAlignment","verticalAlignment"]];
-},"eze$$fromJson":function(_4,_5){
-if(_4==null){
-return;
-}
-this.eze$$setInitial();
-this.setNull(false);
-if(_5){
-var _6=[];
-for(f in _4){
-if(typeof (_4[f])=="string"){
-_4[f]=_4[f].replace(/&quot;/g,"\"");
-}
-_6.push(_4[f]);
-}
-this.row=egl.convertFloatToInt(_6[0]);
-this.column=egl.convertFloatToInt(_6[1]);
-this.horizontalSpan=egl.convertFloatToInt(_6[2]);
-this.verticalSpan=egl.convertFloatToInt(_6[3]);
-this.cellPadding=egl.convertFloatToInt(_6[4]);
-this.widthHint=_6[5];
-this.heightHint=_6[6];
-this.horizontalAlignment=egl.convertFloatToInt(_6[7]);
-this.verticalAlignment=egl.convertFloatToInt(_6[8]);
-}else{
-egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_4["row"],"this.row",false);
-this.row=egl.convertFloatToInt(_4["row"]);
-egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_4["column"],"this.column",false);
-this.column=egl.convertFloatToInt(_4["column"]);
-egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_4["horizontalSpan"],"this.horizontalSpan",false);
-this.horizontalSpan=egl.convertFloatToInt(_4["horizontalSpan"]);
-egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_4["verticalSpan"],"this.verticalSpan",false);
-this.verticalSpan=egl.convertFloatToInt(_4["verticalSpan"]);
-egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_4["cellPadding"],"this.cellPadding",false);
-this.cellPadding=egl.convertFloatToInt(_4["cellPadding"]);
-egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_4["widthHint"],"this.widthHint",false);
-this.widthHint=_4["widthHint"];
-egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_4["heightHint"],"this.heightHint",false);
-this.heightHint=_4["heightHint"];
-egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_4["horizontalAlignment"],"this.horizontalAlignment",false);
-this.horizontalAlignment=egl.convertFloatToInt(_4["horizontalAlignment"]);
-egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_4["verticalAlignment"],"this.verticalAlignment",false);
-this.verticalAlignment=egl.convertFloatToInt(_4["verticalAlignment"]);
-}
-},"eze$$fromXML":function(_7,_8){
-var _9,_a,_b;
-this.eze$$setInitial();
-if(_8==null){
-_8=this.eze$$XMLRootElementName;
-}
-_b=egl.egl.core.$XMLLib.setSimpleElementField(_7,"row");
-if(_b){
-this.row=egl.convertStringToInt(_b);
-}
-_b=egl.egl.core.$XMLLib.setSimpleElementField(_7,"column");
-if(_b){
-this.column=egl.convertStringToInt(_b);
-}
-_b=egl.egl.core.$XMLLib.setSimpleElementField(_7,"horizontalSpan");
-if(_b){
-this.horizontalSpan=egl.convertStringToInt(_b);
-}
-_b=egl.egl.core.$XMLLib.setSimpleElementField(_7,"verticalSpan");
-if(_b){
-this.verticalSpan=egl.convertStringToInt(_b);
-}
-_b=egl.egl.core.$XMLLib.setSimpleElementField(_7,"cellPadding");
-if(_b){
-this.cellPadding=egl.convertStringToInt(_b);
-}
-_b=egl.egl.core.$XMLLib.setSimpleElementField(_7,"widthHint");
-if(_b){
-this.widthHint=_b;
-}
-_b=egl.egl.core.$XMLLib.setSimpleElementField(_7,"heightHint");
-if(_b){
-this.heightHint=_b;
-}
-_b=egl.egl.core.$XMLLib.setSimpleElementField(_7,"horizontalAlignment");
-if(_b){
-this.horizontalAlignment=egl.convertStringToInt(_b);
-}
-_b=egl.egl.core.$XMLLib.setSimpleElementField(_7,"verticalAlignment");
-if(_b){
-this.verticalAlignment=egl.convertStringToInt(_b);
-}
-},"eze$$toXML":function(_c,_d){
-var _e;
-if(_d==null){
-_e="";
-_d=_e+this.eze$$XMLRootElementName;
-}
-var s=["<"+_d];
-s.push(">");
-s.push(egl.egl.core.$XMLLib.writeElement(this.row,"row"));
-s.push(egl.egl.core.$XMLLib.writeElement(this.column,"column"));
-s.push(egl.egl.core.$XMLLib.writeElement(this.horizontalSpan,"horizontalSpan"));
-s.push(egl.egl.core.$XMLLib.writeElement(this.verticalSpan,"verticalSpan"));
-s.push(egl.egl.core.$XMLLib.writeElement(this.cellPadding,"cellPadding"));
-s.push(egl.egl.core.$XMLLib.writeElement(this.widthHint,"widthHint"));
-s.push(egl.egl.core.$XMLLib.writeElement(this.heightHint,"heightHint"));
-s.push(egl.egl.core.$XMLLib.writeElement(this.horizontalAlignment,"horizontalAlignment"));
-s.push(egl.egl.core.$XMLLib.writeElement(this.verticalAlignment,"verticalAlignment"));
-s.push("</"+_d+">");
-return s.join("");
-}});
-
-// End of included file: com/ibm/egl/rui/widgets/GridLayoutData.js
 </script>
 <script>
 // Included file: com/ibm/egl/rui/widgets/GridLayout.js
@@ -12683,84 +12683,107 @@ this.ui=new egl.com.ibm.egl.rui.widgets.GridLayout();
 egl.addEmbeddedWidget(this,"ui");
 this.serverTextArea=new egl.dojo.mobile.widgets.DojoMobileTextArea();
 egl.addEmbeddedWidget(this,"serverTextArea");
-this.reloadButton=new egl.dojo.mobile.widgets.DojoMobileButton();
-egl.addEmbeddedWidget(this,"reloadButton");
+this.reloadRestButton=new egl.dojo.mobile.widgets.DojoMobileButton();
+egl.addEmbeddedWidget(this,"reloadRestButton");
+this.reloadSoapButton=new egl.dojo.mobile.widgets.DojoMobileButton();
+egl.addEmbeddedWidget(this,"reloadSoapButton");
 this.clearButton=new egl.dojo.mobile.widgets.DojoMobileButton();
 egl.addEmbeddedWidget(this,"clearButton");
 this.resultTextArea=new egl.dojo.mobile.widgets.DojoMobileTextArea();
 egl.addEmbeddedWidget(this,"resultTextArea");
 this.testService=new egl.egl.jsrt.RESTServiceRefWrapper("ITestService","","JSESSIONID");
+this.soapService=new egl.egl.jsrt.SOAPServiceRefWrapper("eu.imtech.testrest.ws.services.SoapService","EzeSoapService_wsdl_SoapService_wsdl_SoapService_SoapServiceService","wsdl/SoapService.wsdl","SoapServiceService","SoapService","http://eniac02.eniac.nl:10137/eu.imtech.testrest.ws/services/SoapService");
 this.jsrt$SysVar=new egl.egl.core.SysVar();
-new egl.egl.core.ServiceLib();
 new egl.egl.core.StrLib();
+new egl.egl.core.ServiceLib();
 this.initialUI=[this.ui];
 egl.checkNull(this.ui).setColumns(3);
 egl.checkNull(this.ui).setRows(4);
 egl.checkNull(this.ui).setCellPadding(4);
-egl.checkNull(this.ui).setChildren([this.clearButton,this.serverTextArea,this.resultTextArea,this.reloadButton]);
+egl.checkNull(this.ui).setChildren([this.clearButton,this.serverTextArea,this.resultTextArea,this.reloadRestButton,this.reloadSoapButton]);
 this.serverTextArea.setLayoutData((function(){
 var _1=new egl.com.ibm.egl.rui.widgets.GridLayoutData();
 _1.row=1;
 _1.column=1;
-_1.horizontalSpan=2;
+_1.horizontalSpan=3;
 return _1;
 }).call(this));
 this.serverTextArea.setWidth((200).toString());
-this.reloadButton.setLayoutData((function(){
+this.reloadRestButton.setLayoutData((function(){
 var _2=new egl.com.ibm.egl.rui.widgets.GridLayoutData();
 _2.row=2;
 _2.column=1;
 return _2;
 }).call(this));
-this.reloadButton.setText("Reload");
-this.reloadButton.getOnClick().appendElement(new egl.egl.jsrt.Delegate(this,egl.eu.imtech.testrest.app.ruihandler.Index.prototype.reloadButton_OnClick));
-this.clearButton.setLayoutData((function(){
+this.reloadRestButton.setText("Reload REST");
+this.reloadRestButton.getOnClick().appendElement(new egl.egl.jsrt.Delegate(this,egl.eu.imtech.testrest.app.ruihandler.Index.prototype.reloadRestButton_OnClick));
+this.reloadSoapButton.setLayoutData((function(){
 var _3=new egl.com.ibm.egl.rui.widgets.GridLayoutData();
 _3.row=2;
 _3.column=2;
 return _3;
 }).call(this));
+this.reloadSoapButton.setText("Reload SOAP");
+this.reloadSoapButton.getOnClick().appendElement(new egl.egl.jsrt.Delegate(this,egl.eu.imtech.testrest.app.ruihandler.Index.prototype.reloadSoapButton_OnClick));
+this.clearButton.setLayoutData((function(){
+var _4=new egl.com.ibm.egl.rui.widgets.GridLayoutData();
+_4.row=2;
+_4.column=3;
+return _4;
+}).call(this));
 this.clearButton.setText("Clear");
 this.clearButton.getOnClick().appendElement(new egl.egl.jsrt.Delegate(this,egl.eu.imtech.testrest.app.ruihandler.Index.prototype.clearButton_OnClick));
 this.resultTextArea.setLayoutData((function(){
-var _4=new egl.com.ibm.egl.rui.widgets.GridLayoutData();
-_4.row=3;
-_4.column=1;
-_4.horizontalSpan=2;
-return _4;
+var _5=new egl.com.ibm.egl.rui.widgets.GridLayoutData();
+_5.row=3;
+_5.column=1;
+_5.horizontalSpan=3;
+return _5;
 }).call(this));
 this.resultTextArea.setReadOnly(true);
 this.start();
 },"start":function(){
 this.serverTextArea.setText("http://eniac02.eniac.nl:10137");
-},"reloadButton_OnClick":function(e){
+},"reloadRestButton_OnClick":function(e){
 egl.egl.core.$ServiceLib.setRestServiceLocation(this.testService,((function(x){
 return x!==null?((x).toString()):"";
 })(egl.egl.core.$StrLib.clip((this.serverTextArea.getText())))+"/eu.imtech.testrest.ws/restservices/TestService"));
 egl.egl.core.$ServiceLib.setHTTPBasicAuthentication(this.testService,"java","java");
-var _7=egl.egl.core.$DateTimeLib.currentDate();
-var _8=egl.egl.core.$DateTimeLib.currentTime();
-var _9=function(_a){
-egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_a,"DATE",false);
-return egl.stringToDate(_a,"yyyy-MM-dd");
+var _8=egl.egl.core.$DateTimeLib.currentDate();
+var _9=egl.egl.core.$DateTimeLib.currentTime();
+var _a=function(_b){
+egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_b,"DATE",false);
+return egl.stringToDate(_b,"yyyy-MM-dd");
 };
-var _b=function(_c){
-egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_c,"TIME",false);
-return egl.stringToTime(_c,"HH:mm:ss");
+var _c=function(_d){
+egl.egl.core.$ServiceLib.throwExceptionIfNecessary(_d,"TIME",false);
+return egl.stringToTime(_d,"HH:mm:ss");
 };
-this.testService.invokeService(this,new egl.egl.jsrt.Delegate(this,egl.eu.imtech.testrest.app.ruihandler.Index.prototype.getCurrentDateCallBack),new egl.egl.jsrt.Delegate(this,egl.eu.imtech.testrest.app.ruihandler.Index.prototype.myExceptionHandler),-1,"getCurrentDate",[],[],"currentDate currentTime",[_9,_b],false,"",-1,-1,"",{});
+this.testService.invokeService(this,new egl.egl.jsrt.Delegate(this,egl.eu.imtech.testrest.app.ruihandler.Index.prototype.getCurrentDateCallBack),new egl.egl.jsrt.Delegate(this,egl.eu.imtech.testrest.app.ruihandler.Index.prototype.myExceptionHandler),-1,"getCurrentDate",[],[],"currentDate currentTime",[_a,_c],false,"",-1,-1,"",{});
+},"reloadSoapButton_OnClick":function(e){
+var _f=egl.egl.core.$DateTimeLib.currentDate();
+var _10=egl.egl.core.$DateTimeLib.currentTime();
+var _11=function(obj){
+egl.egl.core.$ServiceLib.throwExceptionIfNecessary(obj,"DATE",false);
+return egl.stringToDate(obj,"yyyy-MM-dd");
+};
+var _13=function(obj){
+egl.egl.core.$ServiceLib.throwExceptionIfNecessary(obj,"TIME",false);
+return egl.stringToTime(obj,"HH:mm:ss");
+};
+this.soapService.invokeService(this,new egl.egl.jsrt.Delegate(this,egl.eu.imtech.testrest.app.ruihandler.Index.prototype.getCurrentDateCallBack),new egl.egl.jsrt.Delegate(this,egl.eu.imtech.testrest.app.ruihandler.Index.prototype.myExceptionHandler),-1,"getCurrentDate",[],[],"currentDate currentTime",[_11,_13],false,"",-1,-1,"",{});
 },"clearButton_OnClick":function(e){
 this.resultTextArea.setText("");
-},"getCurrentDateCallBack":function(_e,_f){
+},"getCurrentDateCallBack":function(_16,_17){
 this.resultTextArea.setText((function(x){
 return x!==null?((x).toString()):"";
 })(((function(x){
 return x!==null?((x).toString()):"";
 })(((function(x){
 return x!==null?((x).toString()):"";
-})(egl.egl.core.$StrLib.formatDate(_e,"dd-MM-yyyy"))+" - "))+(function(x){
+})(egl.egl.core.$StrLib.formatDate(_16,"dd-MM-yyyy"))+" - "))+(function(x){
 return x!==null?((x).toString()):"";
-})(egl.egl.core.$StrLib.formatTime(_f,"hh:mm:ss")))));
+})(egl.egl.core.$StrLib.formatTime(_17,"hh:mm:ss")))));
 },"myExceptionHandler":function(exp){
 this.resultTextArea.setText(("Exception: "+egl.checkNull(exp).message));
 },"toString":function(){
